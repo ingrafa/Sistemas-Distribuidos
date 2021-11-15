@@ -1,0 +1,10 @@
+module Server {
+    typedef sequence<string> UserList;
+    interface CentralServer {
+        long connect_user(in string username);
+        void change_user_status(in string username, in long status);
+        long get_user_status(in string username);
+        UserList list_users_by_status(in long status);
+        UserList get_username_list();
+    };
+};

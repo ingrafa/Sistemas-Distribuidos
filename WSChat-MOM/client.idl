@@ -1,0 +1,7 @@
+module Client{
+    interface ClientServer {
+        void receive_msg(in string username, in string timestamp, in string msg, in string from_me);
+        long get_msg_count(in string username);
+        void show_chat(in string username);
+    };
+};
